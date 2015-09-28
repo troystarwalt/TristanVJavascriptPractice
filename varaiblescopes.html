@@ -1,0 +1,44 @@
+<html>
+
+<script>
+var global = 35;
+var variable = 36;
+
+//a global variable
+var z = 100;
+
+//-------- since z in in a function its not going to call it
+
+function some_f(){
+	var z = 45;
+	console.log("some_f():",z);
+}
+
+//-------- since this is outside a function "{}", they will call on the global variables
+console.log("global 1",z);
+
+//Call the function some_f
+some_f();
+
+//-------- calling a function will ignore the global variable, even though they have the same var z number
+
+function some_q(){
+	var z = 46;
+	console.log("some_q():",z);
+}
+
+//-------- since this is outside a function "{}", they will call on the global variables
+console.log("global 2",z);
+
+//Call the function some_q
+some_q();
+
+//-------
+
+
+</script>
+
+<body>
+</body>
+
+</html>

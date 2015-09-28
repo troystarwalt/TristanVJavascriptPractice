@@ -1,0 +1,39 @@
+<html>
+<head>
+
+<script type="text/javascript">
+
+function checkdate(input){
+var validformat=/^\d{2}\/\d{2}\/\d{4}$/ //Checks if Date is in correct format
+var returndate=false
+if (!validformat.test(input.value))
+alert("Invalid Date Format. Please correct and submit again.")
+else{ //Detailed check for valid date ranges
+var month=input.value.split("/")[0]
+var day=input.value.split("/")[1]
+var year=input.value.split("/")[2]
+var dayobj = new Date(year, month - 1, day)
+if ((dayobj.getMonth()+1!=month)||(dayobj.getDate()!=day)||(dayobj.getFullYear()!=year))
+alert("Invalid Day, Month, or Year range detected. Please correct and submit again.")
+else
+returndate=true
+alert("Thanks for putting your birthday, now input your social security number!!!")
+}
+if (returndate==false) input.select()
+return returndate
+}
+
+</script>
+
+</head>
+
+<body>
+
+<form onSubmit="return checkdate(this.mydate)">
+<input type="text" name="mydate" />
+<input type="submit" value="submit" /><br />
+<b>Valid date format:</b> mm/dd/yyyy<br />
+</form>
+
+</body>
+</html>

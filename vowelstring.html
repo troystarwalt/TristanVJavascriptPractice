@@ -1,0 +1,84 @@
+<html>
+<body>
+<script>
+	//assume input is always 1 character long
+	//no need for error checking on longer strings or different types
+	
+	//function vowelSimple(s){
+/*		if (s === "a")
+			return true;
+		else if (s === "e")
+			return true;
+		else if (s === "i")
+			return true;
+		else if (s === "o")
+			return true;
+		else if (s === "u")
+			return true;
+		else
+			return false;
+} */
+
+// Another way to do it
+
+/*	function vowelOrDigit(s){
+		if (s === "a" || s === "e" || s === "i" || s === "o" || s === "u" || s === !NaN){
+			return true;
+		}else{
+			return false;
+		}
+	}
+*/
+
+// And another way to do it
+
+function vowels(s){
+	var vowels = ["a", "e", "i", "o", "u"];
+	console.log(s, vowels);
+
+	for (var i=0; i<vowels.length; i++){
+		console.log("current vowel:" + vowels[2])
+		if (s === vowels[i]){
+			return true;
+		} else{
+		return false;
+		console.log("False");
+
+		}
+		// didn't return for any of the vowels we checked, so lets return false
+
+	}
+}
+
+//----------
+// Type in the console of google chrome:     vowels("*letter*");
+//----------
+
+/*
+	vowel(1); //false
+	vowel("s"); //false
+	vowel("a"); //true
+	vowel("e"); //true
+	vowel("i"); //true
+	vowel("o"); //true
+	vowel("u"); //true
+	vowel("y"); //false, just for examples sake
+*/
+
+// Test out split function
+
+/*splits each letter
+"abcdef".split("");
+"This is a sentence".split("");
+
+//split each word
+"This is a sentence".split(" ");
+
+//lowercase a capital case letter statement
+"I AM A STATEMENT".toLowerCase();
+// --> "i am a statement"
+*/
+
+</script>
+</body>
+</html>

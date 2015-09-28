@@ -1,0 +1,52 @@
+<html>
+<body>
+<script>
+var numberone = 65;
+var numbertwo = 69;
+var numberthree = 78;
+
+function max(){
+
+// IF conditon one is not met, go to condition two
+	if (numberone > numbertwo) {
+		console.log("Number One is bigger than Number Two.")
+// IF condition two is not met, got to condition three, which is the "else".
+	}else if (numberone < numbertwo && numbertwo >= numberthree) {
+		console.log("Number One is smaller than Number Two.")
+	}else{
+		console.log("Number One and Two is smaller than Number Three.")
+	}
+}
+//--------------
+
+function maxOfThree(apple,banana,carrot){
+// Checking if banana (the second element) is greater than everything else
+	if (banana > apple && banana > carrot){
+		return banana;
+// Checking if carrot (the thrid element) is greater than everythign else
+	}else if (carrot > banana && carrot > apple){
+		return carrot;
+// If all others fail, do this
+	}else{
+		return apple;
+	}
+}
+console.log(maxOfThree(3,4,5))
+//expects third argument, 5 is bigger number
+
+console.log(maxOfThree(8,7,6))
+//expects first argument, 8 is bigger number
+
+console.log(maxOfThree(67,69,68))
+//expects second argument, 69 is bigger number
+
+max();
+
+// true == 1 : true
+// true === 1 : false
+// false == 0 : true
+// false ===0 :  false
+
+</script>
+</body>
+</html>

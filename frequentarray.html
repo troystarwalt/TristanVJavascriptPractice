@@ -1,0 +1,49 @@
+<html> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+
+// Call DAT function
+
+// Set DEM Variables
+
+    function GetMaxFrequency (array) {
+    var store = array;
+    var frequency = [];  // array of frequency.
+    var result;   // holds the max frequency element.
+
+// Calling the array and doing computation
+
+// Just found out that .grep filters trhough the array
+
+    for(var v in store) {
+        var target = store[v];
+        var numberoffrequents = $.grep(store, function (elem) {
+        return elem === target;
+        }).length;
+        frequency.push(numberoffrequents);
+
+    }
+    maxValue = Math.max.apply(this, frequency);
+    result = store[$.inArray(maxValue,frequency)],[target];
+    return result;
+}
+
+// MY STORE OF STUFF!!! APPLES ON SALE!!!
+
+var store = ['APPLES','CORN','CORN','APPLES','APPLES','APPLES','APPLES','APPLES','APPLES','CARS','CARS','CORN','CARS'];
+
+// Calling the function to calculate all the crap in my store!!!
+
+console.log(GetMaxFrequency(store));
+
+</script>
+
+<body>
+
+<p>Welcome to my RAD STORE mofo.</p>
+
+</body>
+
+</html>
